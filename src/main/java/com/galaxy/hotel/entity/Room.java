@@ -33,6 +33,7 @@ public class Room {
     private String roomDescription;
 
     @ElementCollection
+    @OneToMany(mappedBy = "room",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Booking> bookings = new ArrayList<>();
 
 
